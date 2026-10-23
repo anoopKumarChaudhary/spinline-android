@@ -1,0 +1,36 @@
+# Spinline Embed for Android
+
+Put a [Spinline](https://spinline.vercel.app) game in your Android app. A `WebView` subclass that loads a launch URL and relays the game's events. Points are virtual, non-transferable and worth nothing.
+
+## Install
+
+From JitPack (no account needed):
+
+```kotlin
+// settings.gradle.kts
+dependencyResolutionManagement { repositories { maven("https://jitpack.io") } }
+// build.gradle.kts
+implementation("com.github.anoopKumarChaudhary.spinline:embed:sdk-v1.0.0")
+```
+
+Or from GitHub Packages (`app.spinline:embed:1.0.0`, needs a GitHub token in your Gradle credentials).
+
+## Use
+
+```kotlin
+import app.spinline.embed.SpinlineGameView
+
+val game = SpinlineGameView(this)
+game.onEvent = { e -> if (e.type == "result") Log.d("spinline", "won=${e.won} net=${e.net}") }
+game.onClose = { finish() }
+setContentView(game)
+game.open(launchUrl) // from YOUR backend (POST /partner/launch); never ship the API key
+```
+
+Events: `ready` (`game`), `result` (`game`, `won`, `net`), `close`, `error` (`code`, `message`), `resize` (`height`). `INTERNET` is declared by the library manifest.
+
+Voice at shared tables (only when Spinline switched it on for you): the view grants microphone capture to the game origin; declare and request `RECORD_AUDIO`, or set `allowMicrophone = false`.
+
+Full guide: https://spinline.vercel.app/developers
+
+MIT © Spinline
