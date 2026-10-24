@@ -10,7 +10,7 @@ From JitPack (no account needed; this repository is the public mirror of the SDK
 // settings.gradle.kts
 dependencyResolutionManagement { repositories { maven("https://jitpack.io") } }
 // build.gradle.kts
-implementation("com.github.anoopKumarChaudhary:spinline-android:1.0.1")
+implementation("com.github.anoopKumarChaudhary:spinline-android:1.0.2")
 ```
 
 ## Use
