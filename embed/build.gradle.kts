@@ -40,18 +40,10 @@ publishing {
                 description.set("Put a Spinline game in your Android app: a WebView that relays the game's events.")
                 url.set("https://spinline.vercel.app/developers")
                 licenses { license { name.set("MIT"); url.set("https://opensource.org/licenses/MIT") } }
-                scm { url.set("https://github.com/anoopKumarChaudhary/spinline") }
+                scm { url.set("https://github.com/anoopKumarChaudhary/spinline-android") }
             }
         }
     }
-    repositories {
-        maven {
-            name = "GitHubPackages"
-            url = uri("https://maven.pkg.github.com/anoopKumarChaudhary/spinline")
-            credentials {
-                username = System.getenv("GITHUB_ACTOR") ?: ""
-                password = System.getenv("GITHUB_TOKEN") ?: ""
-            }
         }
     }
 }

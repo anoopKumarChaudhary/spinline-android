@@ -4,16 +4,14 @@ Put a [Spinline](https://spinline.vercel.app) game in your Android app. A `WebVi
 
 ## Install
 
-From JitPack (no account needed):
+From JitPack (no account needed; this repository is the public mirror of the SDK source):
 
 ```kotlin
 // settings.gradle.kts
 dependencyResolutionManagement { repositories { maven("https://jitpack.io") } }
 // build.gradle.kts
-implementation("com.github.anoopKumarChaudhary.spinline:embed:sdk-v1.0.0")
+implementation("com.github.anoopKumarChaudhary.spinline-android:embed:1.0.0")
 ```
-
-Or from GitHub Packages (`app.spinline:embed:1.0.0`, needs a GitHub token in your Gradle credentials).
 
 ## Use
 

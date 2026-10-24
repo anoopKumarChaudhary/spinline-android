@@ -1,0 +1,6 @@
+# JitPack builds this repository (the public mirror of the Spinline monorepo's sdk/android).
+# Artifact: com.github.anoopKumarChaudhary.spinline-android:embed:<tag>
+jdk:
+  - openjdk17
+install:
+  - gradle --no-daemon :embed:publishToMavenLocal
