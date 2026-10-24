@@ -3,4 +3,4 @@
 jdk:
   - openjdk17
 install:
-  - gradle --no-daemon :embed:publishToMavenLocal
+  - ./gradlew --no-daemon :embed:publishToMavenLocal
