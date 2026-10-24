@@ -38,7 +38,7 @@ publishing {
             pom {
                 name.set("Spinline Embed")
                 description.set("Put a Spinline game in your Android app: a WebView that relays the game's events.")
-                url.set("https://spinline.vercel.app/developers")
+                url.set("https://playmez.com/developers")
                 licenses { license { name.set("MIT"); url.set("https://opensource.org/licenses/MIT") } }
                 scm { url.set("https://github.com/anoopKumarChaudhary/spinline-android") }
             }
